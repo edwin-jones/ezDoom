@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B879898A-E69D-4000-93FD-4A1F0A166B0A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ezDoomCrossPlatform</RootNamespace>
+    <AssemblyName>ezDoomCrossPlatform</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Mac|x86'">
+    <OutputPath>bin\x86\Mac\</OutputPath>
+    <DefineConstants>TRACE;Mac</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\GameProcessHandler.cs" />
+    <Compile Include="Code\WADDetail.cs" />
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\begin_code.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\close_code.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_active.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_audio.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_byteorder.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_cdrom.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_config.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_config_dreamcast.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_config_macos.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_config_macosx.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_config_os2.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_config_win32.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_copying.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_cpuinfo.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_endian.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_error.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_events.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_getenv.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_joystick.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_keyboard.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_keysym.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_loadso.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_main.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_mouse.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_mutex.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_name.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_opengl.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_platform.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_quit.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_rwops.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_stdinc.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_syswm.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_thread.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_timer.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_types.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_version.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Headers\SDL_video.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\begin_code.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\close_code.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_active.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_audio.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_byteorder.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_cdrom.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_config.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_config_dreamcast.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_config_macos.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_config_macosx.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_config_os2.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_config_win32.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_copying.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_cpuinfo.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_endian.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_error.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_events.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_getenv.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_joystick.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_keyboard.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_keysym.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_loadso.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_main.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_mouse.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_mutex.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_name.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_opengl.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_platform.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_quit.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_rwops.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_stdinc.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_syswm.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_thread.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_timer.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_types.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_version.h" />
+    <Content Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Headers\SDL_video.h" />
+    <Content Include="Engine\fmodex.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Engine\zdoom.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IWADS\Doom %28Shareware%29.wad">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Engine\zdoom.pk3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Engine\Contents\Frameworks\libfmodex.dylib">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Engine\Contents\Frameworks\SDL.framework.new\Headers" />
+    <None Include="Engine\Contents\Frameworks\SDL.framework.new\Resources" />
+    <None Include="Engine\Contents\Frameworks\SDL.framework.new\SDL" />
+    <None Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Resources\Info.plist" />
+    <None Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\Resources\SDLMain.nib\objects.nib" />
+    <None Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\A\SDL" />
+    <None Include="Engine\Contents\Frameworks\SDL.framework.new\Versions\Current" />
+    <None Include="Engine\Contents\Frameworks\SDL.framework.old\Headers" />
+    <None Include="Engine\Contents\Frameworks\SDL.framework.old\Resources" />
+    <None Include="Engine\Contents\Frameworks\SDL.framework.old\SDL" />
+    <None Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Resources\Info.plist" />
+    <None Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\Resources\SDLMain.nib\objects.nib" />
+    <None Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\A\SDL" />
+    <None Include="Engine\Contents\Frameworks\SDL.framework.old\Versions\Current" />
+    <None Include="Engine\Contents\Info.plist" />
+    <Content Include="Engine\Contents\MacOS\DoomShareware.wad">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Engine\Contents\MacOS\zdoom" />
+    <None Include="Engine\Contents\MacOS\zdoom.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Engine\Contents\MacOS\zdoom.pk3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Engine\Contents\PkgInfo" />
+    <None Include="Engine\Contents\Resources\.DS_Store" />
+    <None Include="Engine\Contents\Resources\zdoom.icns" />
+    <None Include="IWADS\Free Doom.wad" />
+    <None Include="IWADS\Heretic %28Shareware%29.wad" />
+    <None Include="IWADS\Hexen %28Shareware%29.wad" />
+    <None Include="IWADS\Strife %28Shareware%29.wad" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="PWADS\Slaughter until Death.wad" />
+    <Content Include="PWADS\Super Mario.wad">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="PWADS\Trinity.wad" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DoomArt.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
