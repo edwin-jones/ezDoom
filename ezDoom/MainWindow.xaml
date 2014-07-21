@@ -1,0 +1,55 @@
+﻿<Window x:Class="ezDoom.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStartupLocation="CenterScreen"
+        Title="ezDoom - The easy way to play Doom!" Height="700" Width="480" Background="LightGray" ResizeMode="CanMinimize">
+    <Grid Background="#FFEBEBEB">
+        <StackPanel>
+            <Rectangle Height="10"/>
+            <Label HorizontalAlignment="Center" >Welcome to ezDoom, the easy way to play Doom and many of its mods for free!</Label>
+            <Label HorizontalAlignment="Center">Please choose a game from the options below and click "Play" to get started.</Label>
+            <Rectangle Height="20"/>
+            <Image Height="227" Name="DoomImage" Stretch="Fill" Width="408" Source="/ezDoom;component/DoomArt.png" />
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Center">
+            <Rectangle Height="320"/>
+            <Border BorderBrush="Transparent" BorderThickness="1" Width="440" Height="50">
+                <StackPanel Name="IwadChoicePanel" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center"  Width="Auto" >
+
+                    <Label HorizontalAlignment="Left">Select IWAD</Label>
+                    <Rectangle Width="69"/>
+                    <ComboBox Name="IWADSelectionComboBox" Width="150" HorizontalAlignment="Center" />
+                    <Rectangle Width="30"/>
+                    <Button Width="50" Height="25" Content="Add" Name="AddIWADButton"  HorizontalAlignment="Right" />
+                    <Rectangle Width="10"/>
+                    <Button Width="50" Height="25" Content="Delete" Name="DeleteIWADButton"  HorizontalAlignment="Right" />
+                </StackPanel>
+            </Border>
+
+            <Label Width="455" FontWeight="Bold" Foreground="DarkRed">Advanced Users Only!</Label>
+            <Border BorderBrush="DarkRed" BorderThickness="2,2" Width="455" Height="150">
+                <StackPanel Name="PwadChoicePanel" Orientation="Horizontal" Width="450" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" >
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Left">
+                    <Label HorizontalAlignment="Left">Select</Label>
+                        <Label HorizontalAlignment="Left">PWADs/PK3s</Label>
+                    </StackPanel>
+                    <Rectangle Width="61"/>
+                    <ListView Name="ModSelectionListView" Width="150" Height="125" HorizontalAlignment="Center" />
+                    <Rectangle Width="30"/>
+                    <Button Width="50" Height="25" Content="Add" Name="AddModButton"  HorizontalAlignment="Right"/>
+                    <Rectangle Width="10"/>
+                    <Button Width="50" Height="25" Content="Delete" Name="DeleteModButton"   HorizontalAlignment="Right"/>
+                </StackPanel>
+            </Border>
+ 
+            <Rectangle Height="20"/>
+            <Button Width="150" Height="30" Content="Play" Click="PlayButton_Click" VerticalAlignment="Center" />
+            <Rectangle Height="15"/>
+            <TextBlock Width="450" TextWrapping="Wrap" Height="40" HorizontalAlignment="Center" FontStyle="Italic" Foreground="Gray" Margin="10,0,0,0">Programmed by 
+                <Hyperlink NavigateUri="http://edwinjones.me.uk" RequestNavigate="Hyperlink_RequestNavigate">Edwin Jones.</Hyperlink>
+                All other trademarks and copyrights are the property of their respective owners.
+                All included WAD files are freeware. Powered by <Hyperlink NavigateUri="http://www.osnanet.de/c.oelckers/gzdoom/about.html" RequestNavigate="Hyperlink_RequestNavigate">GZDOOM.</Hyperlink></TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

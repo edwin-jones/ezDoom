@@ -1,0 +1,1 @@
+﻿Please note, all saves created by running the program will be saved in this folder if the Application.ApplicationDeployment.CurrentDeployment.DataDirectory can't be used.
