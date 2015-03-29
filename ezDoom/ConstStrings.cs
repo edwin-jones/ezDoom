@@ -16,5 +16,6 @@ namespace ezDoom
         internal static readonly string ModRootNodeName     = "mods";
         internal static readonly string ModNodeName         = "mod";
         internal static readonly string ErrorBoxTitle       = "ezDoom Error";
+        internal static readonly string AppName             = "ezDoom";
     }
 }

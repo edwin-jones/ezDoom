@@ -4,6 +4,7 @@
 *.obj
 *.elf
 
+
 # Libraries
 *.lib
 *.a
@@ -21,3 +22,9 @@
 *.i*86
 *.x86_64
 *.hex
+
+#user profile(s)
+*.suo
+
+/ezDoom/bin
+/ezDoom/obj

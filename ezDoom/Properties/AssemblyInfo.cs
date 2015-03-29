@@ -12,7 +12,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ezDoom")]
-[assembly: AssemblyCopyright("Copyright © 2013 Edwin Jones")]
+[assembly: AssemblyCopyright("Copyright © 2015 Edwin Jones")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
