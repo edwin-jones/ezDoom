@@ -155,7 +155,9 @@ namespace ezDoom
         }
 
 
-        //Abstracted add package function
+        /// <summary>
+        /// Abstracted add package function
+        /// </summary>
         void AddPackage(Selector comboBox, string folderName)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -187,7 +189,9 @@ namespace ezDoom
         }
 
 
-        //abstracted delete wad function.
+        /// <summary>
+        /// abstracted delete wad function.
+        /// </summary>
         void DeletePackage(Selector selectionBox, GamePackage itemToDelete, string folderName)
         {
             File.Delete(folderName + "/" + itemToDelete.FullName);
@@ -196,11 +200,15 @@ namespace ezDoom
         }
 
 
-        //Hyperlink navigation handler
+        /// <summary>
+        /// Hyperlink navigation handler
+        /// </summary>
         void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {
-            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
-            e.Handled = true;
+            using (Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri)))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
