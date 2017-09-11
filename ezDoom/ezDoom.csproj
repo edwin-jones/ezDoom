@@ -32,7 +32,7 @@
     <PublisherName>Edwin Jones</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>42</ApplicationRevision>
+    <ApplicationRevision>44</ApplicationRevision>
     <ApplicationVersion>3.5.10.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -232,12 +232,12 @@
     <Content Include="Mods\Trinity.wad">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Engine\gzdoom.sf2">
+    <Content Include="Engine\gzdoom.sf2">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Engine\licenses.zip">
+    </Content>
+    <Content Include="Engine\licenses.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Content>
     <None Include="Properties\app.manifest">
       <SubType>Designer</SubType>
     </None>
