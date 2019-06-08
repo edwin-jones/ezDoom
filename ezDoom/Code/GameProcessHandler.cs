@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Deployment.Application;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Text;
 
 namespace ezDoom.Code
@@ -28,13 +29,10 @@ namespace ezDoom.Code
             var details = new ProcessStartInfo(ConstStrings.EngineFolderName + "/gzdoom.exe");
             details.UseShellExecute = false; //we need to set UseShellExecute to false to make the exe run from the local folder.
 
-            //attempt to use the clickonce data directory folder for saves to keep them persistent between updates.
-            //Default to the /Saves directory if this fails.
-            var savesDirectory = "/Saves";
-            if (ApplicationDeployment.IsNetworkDeployed)
-            {
-                savesDirectory = System.Deployment.Application.ApplicationDeployment.CurrentDeployment.DataDirectory;
-            }
+            //Store game saves in the user's saved games folder.
+            var userDirectory = Environment.ExpandEnvironmentVariables("%USERPROFILE%");
+            var savesDirectory = Path.Combine(userDirectory, "Saved Games", "ezDoom");
+            savesDirectory = string.Format("\"{0}\"", savesDirectory);
 
             //launch GZDoom with the correct args.
             details.Arguments = string.Format("-iwad \"../iwads/{0}\" -file {1}  -savedir {2}", IWADPath, chosenPackages, savesDirectory);
