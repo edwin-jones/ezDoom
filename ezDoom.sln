@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Windows Desktop
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ezDoom", "ezDoom\ezDoom.csproj", "{46455F5E-04E3-49EE-89F0-FF4C7EAB6F67}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ezDoom Installer", "ezDoom Installer\ezDoom Installer.vdproj", "{0575CBF8-1747-412E-8EC2-BAEE3B650B45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,8 +23,15 @@ Global
 		{46455F5E-04E3-49EE-89F0-FF4C7EAB6F67}.Release|Any CPU.Build.0 = Release|Any CPU
 		{46455F5E-04E3-49EE-89F0-FF4C7EAB6F67}.Release|x86.ActiveCfg = Release|x86
 		{46455F5E-04E3-49EE-89F0-FF4C7EAB6F67}.Release|x86.Build.0 = Release|x86
+		{0575CBF8-1747-412E-8EC2-BAEE3B650B45}.Debug|Any CPU.ActiveCfg = Debug
+		{0575CBF8-1747-412E-8EC2-BAEE3B650B45}.Debug|x86.ActiveCfg = Debug
+		{0575CBF8-1747-412E-8EC2-BAEE3B650B45}.Release|Any CPU.ActiveCfg = Release
+		{0575CBF8-1747-412E-8EC2-BAEE3B650B45}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14F93329-FD89-4AEB-B6A8-100BDB1200AF}
 	EndGlobalSection
 EndGlobal

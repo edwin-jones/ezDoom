@@ -28,3 +28,12 @@
 
 /ezDoom/bin
 /ezDoom/obj
+.vs/ezDoom/v15/sqlite3/storage.ide-wal
+.vs/ezDoom/v15/Server/sqlite3/db.lock
+.vs/ezDoom/v15/Server/sqlite3/storage.ide
+.vs/ezDoom/v15/Server/sqlite3/storage.ide-wal
+.vs/ezDoom/v15/Server/sqlite3/storage.ide-shm
+.vs/ezDoom/v15/sqlite3/db.lock
+.vs/ezDoom/v15/sqlite3/storage.ide
+.vs/ezDoom/v15/sqlite3/storage.ide-shm
+ezDoom Installer/Release/ezDoom Installer.msi
