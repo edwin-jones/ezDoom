@@ -2,18 +2,18 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         WindowStartupLocation="CenterScreen"
-        Title="ezDoom - The easy way to play Doom!" Height="700" Width="480" Background="LightGray" ResizeMode="CanMinimize">
+        Title="ezDoom - The easy way to play Doom!" Height="650" Width="480" Background="LightGray" ResizeMode="CanMinimize">
     <Grid Background="#FFEBEBEB">
         <StackPanel>
             <Rectangle Height="10"/>
             <Label HorizontalAlignment="Center" >Welcome to ezDoom, the easy way to play Doom and many of its mods for free!</Label>
             <Label HorizontalAlignment="Center">Please choose a game from the options below and click "Play" to get started.</Label>
-            <Rectangle Height="20"/>
-            <Image Height="227" Name="DoomImage" Stretch="Fill" Width="408" Source="/ezDoom;component/DoomArt.png" />
+            <Rectangle Height="10"/>
+            <Image Height="200" Name="DoomImage" Stretch="Fill" Width="350" Source="/ezDoom;component/DoomArt.png" />
         </StackPanel>
 
         <StackPanel VerticalAlignment="Center">
-            <Rectangle Height="320"/>
+            <Rectangle Height="280"/>
             <Border BorderBrush="Transparent" BorderThickness="1" Width="440" Height="50">
                 <StackPanel Name="IwadChoicePanel" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center"  Width="Auto" >
 
@@ -49,7 +49,7 @@
             <TextBlock Width="450" TextWrapping="Wrap" Height="40" HorizontalAlignment="Center" FontStyle="Italic" Foreground="Gray" Margin="10,0,0,0">Programmed by 
                 <Hyperlink NavigateUri="http://edwinjones.me.uk" RequestNavigate="Hyperlink_RequestNavigate">Edwin Jones.</Hyperlink>
                 All other trademarks and copyrights are the property of their respective owners.
-                All included WAD files are freeware. Powered by <Hyperlink NavigateUri="http://www.osnanet.de/c.oelckers/gzdoom/about.html" RequestNavigate="Hyperlink_RequestNavigate">GZDOOM.</Hyperlink></TextBlock>
+                All included WAD files are freeware. Powered by <Hyperlink NavigateUri="https://zdoom.org/wiki/GZDoom" RequestNavigate="Hyperlink_RequestNavigate">GZDOOM.</Hyperlink></TextBlock>
         </StackPanel>
     </Grid>
 </Window>
