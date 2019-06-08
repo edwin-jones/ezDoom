@@ -44,7 +44,7 @@
             </Border>
  
             <Rectangle Height="20"/>
-            <Button Width="150" Height="30" Content="Play" Click="PlayButton_Click" VerticalAlignment="Center" />
+            <Button Width="150" Height="30" Content="Play" Click="PlayButton_Click" VerticalAlignment="Center" IsDefault="True" />
             <Rectangle Height="15"/>
             <TextBlock Width="450" TextWrapping="Wrap" Height="40" HorizontalAlignment="Center" FontStyle="Italic" Foreground="Gray" Margin="10,0,0,0">Programmed by 
                 <Hyperlink NavigateUri="http://edwinjones.me.uk" RequestNavigate="Hyperlink_RequestNavigate">Edwin Jones.</Hyperlink>
