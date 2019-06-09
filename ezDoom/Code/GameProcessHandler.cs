@@ -20,7 +20,7 @@ namespace ezDoom.Code
             StringBuilder sb = new StringBuilder();
             foreach (GamePackage item in mods)
             {
-                sb.AppendFormat(" \"../{0}/{1}\" ", ConstStrings.ModsFolderName, item.FullName);
+                sb.Append($"\"../{ConstStrings.ModsFolderName}/{item.FullName}\" ");
             }
 
             string chosenPackages = sb.ToString();
@@ -32,7 +32,7 @@ namespace ezDoom.Code
             //Store game saves in the user's saved games folder.
             var userDirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
             var savesDirectoryRaw = Path.Combine(userDirectory, ConstStrings.GameSaveFolderName);
-            var savesDirectory = string.Format("\"{0}\"", savesDirectoryRaw).Replace(@"\", "/");
+            var savesDirectory = $"\"{savesDirectoryRaw}\"".Replace(@"\", "/");
 
             //launch GZDoom with the correct args.
             details.Arguments = $@"-iwad ../iwads/{IWADPath} -file {chosenPackages} -savedir {savesDirectory}";
