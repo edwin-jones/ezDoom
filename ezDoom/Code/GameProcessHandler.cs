@@ -26,16 +26,16 @@ namespace ezDoom.Code
             string chosenPackages = sb.ToString();
 
             //create process to launch the game.
-            var details = new ProcessStartInfo(ConstStrings.EngineFolderName + "/gzdoom.exe");
+            var details = new ProcessStartInfo(Path.Combine(ConstStrings.EngineFolderName, ConstStrings.GzDoomExeName));
             details.UseShellExecute = false; //we need to set UseShellExecute to false to make the exe run from the local folder.
 
             //Store game saves in the user's saved games folder.
-            var userDirectory = Environment.ExpandEnvironmentVariables("%USERPROFILE%");
-            var savesDirectory = Path.Combine(userDirectory, "Saved Games", "ezDoom");
-            savesDirectory = string.Format("\"{0}\"", savesDirectory);
+            var userDirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            var savesDirectoryRaw = Path.Combine(userDirectory, ConstStrings.GameSaveFolderName);
+            var savesDirectory = string.Format("\"{0}\"", savesDirectoryRaw).Replace(@"\", "/");
 
             //launch GZDoom with the correct args.
-            details.Arguments = string.Format("-iwad \"../iwads/{0}\" -file {1}  -savedir {2}", IWADPath, chosenPackages, savesDirectory);
+            details.Arguments = $@"-iwad ../iwads/{IWADPath} -file {chosenPackages} -savedir {savesDirectory}";
 
             //we wrap the process in a using statement to make sure the handle is always disposed after use.
             using (Process process = Process.Start(details)) { };
