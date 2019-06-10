@@ -37,7 +37,7 @@ namespace ezDoom.Code
             var renderingOptions = softwareRendering ? "+set vid_renderer 0" : "+set vid_renderer 1";
 
             //launch GZDoom with the correct args.
-            details.Arguments = $@"-iwad ../iwads/{IWADPath} -file {chosenPackages} -savedir {savesDirectory} {renderingOptions}";
+            details.Arguments = $"-iwad ../iwads/\"{IWADPath}\" -file {chosenPackages} -savedir {savesDirectory} {renderingOptions}";
 
             //we wrap the process in a using statement to make sure the handle is always disposed after use.
             using (Process process = Process.Start(details)) { };
