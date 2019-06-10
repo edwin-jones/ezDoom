@@ -14,7 +14,7 @@ namespace ezDoom.Code
         /// <summary>
         /// This method launches the doom engine with chosen settings.
         /// </summary>
-        public static void RunGame(string IWADPath, IEnumerable<GamePackage> mods)
+        public static void RunGame(string IWADPath, IEnumerable<GamePackage> mods, bool softwareRendering)
         {
             //use a string builder to take all the chosen mods and turn them into a string we can pass as an argument.
             StringBuilder sb = new StringBuilder();
@@ -34,8 +34,10 @@ namespace ezDoom.Code
             var savesDirectoryRaw = Path.Combine(userDirectory, ConstStrings.GameSaveFolderName);
             var savesDirectory = $"\"{savesDirectoryRaw}\"".Replace(@"\", "/");
 
+            var renderingOptions = softwareRendering ? "+set vid_renderer 0" : "+set vid_renderer 1";
+
             //launch GZDoom with the correct args.
-            details.Arguments = $@"-iwad ../iwads/{IWADPath} -file {chosenPackages} -savedir {savesDirectory}";
+            details.Arguments = $@"-iwad ../iwads/{IWADPath} -file {chosenPackages} -savedir {savesDirectory} {renderingOptions}";
 
             //we wrap the process in a using statement to make sure the handle is always disposed after use.
             using (Process process = Process.Start(details)) { };

@@ -25,6 +25,7 @@ namespace ezDoom.Code
                     loadResult = new SettingsLoadResult();
                     XDocument doc = XDocument.Load(ConstStrings.SaveFileName);
 
+                    loadResult.UseSoftwareRenderer = (bool?)(doc.Root.Element(ConstStrings.SoftwareRenderingNodeName)) ?? false;
                     loadResult.ChosenIwadName = doc.Root.Element(ConstStrings.IwadNodeName).Value;
                     var mods = doc.Root.Element(ConstStrings.ModRootNodeName).Descendants().ToList();
 
@@ -35,7 +36,7 @@ namespace ezDoom.Code
                 }
                 catch (Exception) //warn user on error.
                 {
-                    System.Windows.MessageBox.Show("Settings file has invalid data or could not be loaded.", ConstStrings.ErrorBoxTitle, MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Settings file has invalid data or could not be loaded.", ConstStrings.ErrorBoxTitle, MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
 
@@ -45,10 +46,11 @@ namespace ezDoom.Code
         /// <summary>
         /// This function saves the current ezdoom options to an xml file.
         /// </summary>
-        public static void SaveSettings(GamePackage iwad, IEnumerable<GamePackage> mods)
+        public static void SaveSettings(GamePackage iwad, IEnumerable<GamePackage> mods, bool useSoftwareRenderer)
         {
             var xDoc = new XDocument(
                 new XElement(ConstStrings.RootNodeName,
+                    new XElement(ConstStrings.SoftwareRenderingNodeName, useSoftwareRenderer),
                     new XElement(ConstStrings.IwadNodeName, iwad.FullName),
                     new XElement(ConstStrings.ModRootNodeName,
                         from m in mods
@@ -70,5 +72,6 @@ namespace ezDoom.Code
 
         public string ChosenIwadName { get; set; }
         public List<string> ChosenModNames { get; set; }
+        public bool UseSoftwareRenderer { get; set; }
     }
 }

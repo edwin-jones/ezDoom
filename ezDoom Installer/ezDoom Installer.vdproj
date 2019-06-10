@@ -202,15 +202,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ezDoom"
-        "ProductCode" = "8:{B4B29CFA-1D5D-4B27-8F10-E1482001BDED}"
-        "PackageCode" = "8:{A9A3E83E-5780-47C7-A916-0B412FA3D2BA}"
+        "ProductCode" = "8:{8E2BFBDE-BD63-4902-825E-A8DD532C92C1}"
+        "PackageCode" = "8:{17C2EC19-B5D5-4F8F-937F-B33BE5DC2DAE}"
         "UpgradeCode" = "8:{AAE68C72-4F49-4802-991A-639BF10B0514}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.1.0"
+        "ProductVersion" = "8:1.2.0"
         "Manufacturer" = "8:Edwin Jones"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -752,7 +752,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_34AB429077B940ADB2B97B0E909C326C"
             {
-            "SourcePath" = "8:..\\ezDoom\\obj\\Release\\ezDoom.exe"
+            "SourcePath" = "8:..\\ezDoom\\obj\\Debug\\ezDoom.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_F17BAEA9CD5B4C2DA688DB07D1719FB6"

@@ -62,6 +62,8 @@ namespace ezDoom
 
                 if (loadResult != null)
                 {
+                    UseSoftwareRenderingCheckBox.IsChecked = loadResult.UseSoftwareRenderer;
+
                     //Set the saved iwad as the selected iwad
                     foreach (GamePackage item in IWADSelectionComboBox.Items)
                     {
@@ -100,8 +102,8 @@ namespace ezDoom
             var selectedPackages = ModSelectionListView.SelectedItems.Cast<GamePackage>();
 
             //run the game and save the most recently chosen settings for the next run.
-            GameProcessHandler.RunGame(IWAD.FullName, selectedPackages);
-            SettingsHandler.SaveSettings(IWAD, selectedPackages);
+            GameProcessHandler.RunGame(IWAD.FullName, selectedPackages, UseSoftwareRenderingCheckBox.IsChecked ?? false);
+            SettingsHandler.SaveSettings(IWAD, selectedPackages, UseSoftwareRenderingCheckBox.IsChecked ?? false);
 
             this.Close(); //program complete, close it.
         }
