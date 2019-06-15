@@ -40,7 +40,7 @@
                     <Button Width="50" Height="25" Content="Add" Name="AddModButton"  HorizontalAlignment="Right"/>
                     <Rectangle Width="10"/>
                     <Button Width="50" Height="25" Content="Delete" Name="DeleteModButton"   HorizontalAlignment="Right"/>
-                    <CheckBox Name="UseSoftwareRenderingCheckBox"  Width="Auto"  Margin="-111,0,0,0">
+                    <CheckBox Name="UseSoftwareRenderingCheckBox"  Width="Auto" Margin="-111,-92,0,0" Height="35">
                         <StackPanel>
                             <TextBlock FlowDirection="LeftToRight" Text="Software" />
                             <TextBlock FlowDirection="LeftToRight" Text="rendering?" />
